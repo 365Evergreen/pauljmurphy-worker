@@ -1,0 +1,117 @@
+/* Layout and spacing */
+.adminPage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* Admin header */
+.adminHeader {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.adminHeaderButtons {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Clean up button defaults to cancel out index.css layout overrides */
+.homeButton,
+.newPostButton,
+.mediaLibraryButton {
+    position: static !important;
+    /* Cancels out any bad absolute positioning */
+    display: inline-block !important;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.homeButton {
+    background-color: #c5c9cc;
+
+}
+
+.newPostButton {
+    background-color: blueviolet;
+}
+
+.mediaLibraryButton {
+    background-color: #007bff;
+}
+
+/* Table Setup */
+.adminTableContainer {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse; /* Collapses borders so separators work correctly */
+  text-align: left;
+}
+
+/* Header Row Styling */
+.adminTableHeader th {
+  background-color: #f4f6f8;   /* Cleaner alternative to aqua */
+  color: #555;
+  padding: 12px 16px;          /* Generous header padding */
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Individual Data Row Padding and Separators */
+.tableRow td {
+  padding: 16px;               /* Adds vertical and horizontal whitespace */
+  border-bottom: 1px solid #e0e0e0; /* Clean, subtle horizontal separator line */
+  vertical-align: middle;
+}
+
+/* Action Buttons Container layout */
+.adminTableActions {
+  display: flex !important;    /* Forces side-by-side flex layout inside the column */
+  flex-direction: row !important;
+  gap: 8px !important;         /* Spaces out Edit and Delete buttons */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Buttons Core Custom Layout resets */
+.editPostButton, .deletePostButton {
+  position: static !important; /* Forces buttons to obey structural flows */
+  color: white;
+  border: none;
+  padding: 6px 12px;           /* Cleaner, proportional button scale */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.editPostButton {
+  background-color: blueviolet;
+}
+
+.deletePostButton {
+  background-color: red;
+}

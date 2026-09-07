@@ -1,0 +1,73 @@
+.twoColumnContainer {
+  padding: 1rem 4rem ;
+  display: flex !important;
+  flex-direction: row;
+  align-items: flex-start; /* 👈 CRITICAL: Prevents columns from forcing rigid heights */
+  gap: 2rem;
+  width: 100%;
+  height: auto !important; /* Forces layout to match contents */
+}
+
+.column {
+  flex: 1;
+  min-width: 0; /* Prevents text overflow breaking column bounds */
+  height: auto !important;
+}
+
+.columnRight {
+  display: block !important; /* Overrides accidental flex properties */
+  position: relative;
+  height: auto !important;
+}
+
+.twoColumnContainer .columnLeft {
+  background-color: transparent; /* Darker shade for the left column */
+  height: auto !important;
+}
+
+.twoColumnContainer .columnRight {
+  background-color: transparent; /* Lighter shade for the right column */
+  height: auto !important;
+}
+
+.content .h2 {
+  color: #313030;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.content .p {
+  color: #2e2e2e;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.twoColumnContainer .column h2 {
+  color: #4f4747;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.twoColumnContainer .column p {
+  color: #4b4747;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.twoColumnContainer .column a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Responsive breakpoint for mobile screens */
+@media (max-width: 768px) {
+  .twoColumnContainer {
+    flex-direction: column; /* Stacks columns vertically */
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,114 @@
+.navContainer {
+  width: 100%;
+}
+
+/* Navigation bar layout */
+.navBar {
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navLinks { 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  flex-direction: column; /* 📱 Mobile default layout position stacking downwards */
+  gap: 2rem; /* Large tap clearance spacing for links on screen inputs */
+  width: 100%;
+}
+
+.navLinks a {
+  display: block;
+  text-decoration: none;
+  color: #021425; 
+  font-size: 1.25rem; /* Larger scaling font helps visibility bounds on touch points */
+  font-weight: 500;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.navLinks a:global(.active) {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+
+.navItem {
+  position: relative; /* Anchor for absolute container positioning */
+}
+
+.navLink {
+  display: block;
+  padding: 1.5rem 1rem;
+  color: #4b2d2d;
+  text-decoration: none;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+/* Mega menu overlay box */
+.megamenuDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 1.5rem;
+  z-index: 1000;
+}
+
+/* Grid splits your JSON columns configuration natively */
+.megamenuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.columnHeading {
+  margin: 0 0 0.5rem 0;
+  color: #333333;
+  font-size: 1rem;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 0.25rem;
+}
+
+.columnLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subLink {
+  display: block;
+  padding: 0.35rem 0;
+  color: #666666;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.subLink:hover {
+  color: #0066cc;
+}
+/* 💻 Snap elements back to tight right desktop header ribbons grid */
+@media (min-width: 768px) {
+  .navLinks {
+    flex-direction: row;
+    gap: 1.5rem;
+    width: auto;
+  }
+
+  .navLinks a {
+    font-size: 0.95rem;
+    width: auto;
+  }
+}
