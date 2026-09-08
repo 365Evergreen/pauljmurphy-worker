@@ -15,8 +15,8 @@
 	"d1_databases": [
 
 		{
-			"binding": "pauljmurphy_website_db",
-			"database_name": "pauljmurphy-website-db",
+			"binding": "DB",
+			"database_name": "pauljmurphy_website_db",
 			"database_id": "3bdd490e-c502-4cbb-8b88-9a21c2f830ec",
 			"remote": true
 		}
