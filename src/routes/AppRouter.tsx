@@ -12,6 +12,7 @@ import TutorialsPage from "../pages/TutorialsPage/TutorialsPage";
 import AboutPage from "../pages/AboutPage/AboutPage"
 import ResourcesPage from "../pages/ResourcesPage/ResourcesPage";
 import DownloadsPage from "../pages/DownloadsPage/DownloadsPage";
+import FormRegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 
 export default function AppRouter() {
   return (
@@ -30,6 +31,7 @@ export default function AppRouter() {
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/resources" element={<ResourcesPage/>}/>
           <Route path="/resources/downloads" element={<DownloadsPage/>}/>
+          <Route path="/registration" element={<FormRegistrationPage/>}/>
         </Route>
 
         {/* Editor & Admin Layout - all routes must follow the /admin/ path */}

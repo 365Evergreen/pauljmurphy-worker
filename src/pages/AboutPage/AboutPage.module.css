@@ -6,6 +6,10 @@
     width: 100%;
 }
 
-.contentPageTitle{
+.pageContent{
+    width: 100%;
+}
+.formTestContainer{
+    background-color: aquamarine;
     width: 100%;
 }

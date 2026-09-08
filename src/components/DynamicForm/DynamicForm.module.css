@@ -1,0 +1,52 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.requiredStar {
+  color: #d9383a;
+  margin-left: 0.25rem;
+}
+
+.inputField, .selectField {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.inputField:focus, .selectField:focus {
+  border-color: #0078d4;
+  outline: none;
+}
+
+.submitButton {
+  align-self: flex-start;
+  padding: 0.6rem 1.5rem;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submitButton:hover {
+  background-color: #106ebe;
+}

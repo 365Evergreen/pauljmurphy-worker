@@ -82,7 +82,6 @@ div[data-type="column"]:focus-within {
   background: #f9f9f9;
   position: sticky;
   top: 56px;
-  z-index: 500;
   justify-content: flex-start !important;
   align-items: center !important;
 }

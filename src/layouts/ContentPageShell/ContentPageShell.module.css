@@ -1,11 +1,11 @@
-.contentPageShell{
-    background-color: var(--bg);    margin-inline: auto;
-    max-width: 1200px;
-    padding-inline: clamp(1.5rem, 5vw, 4rem); 
-    box-sizing: border-box; 
+.contentPageShell {
+    background-color: var(--bg);
+    box-sizing: border-box;
 }
 
-.mainContainer{
-    padding-top: 100px;
-  max-width: 65ch;
-  margin-inline: auto;}
+.mainContent {margin-top: var(--header-height);
+    background-color: rgb(196, 185, 185);
+    max-width: 1200px;
+    padding-inline: clamp(1.5rem, 5vw, 2rem);
+    margin-inline: auto;
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './AdaptiveCardForm.module.css';
 
 const POWER_AUTOMATE_URL =
-    'https://azure.com';
+    'https://9e393617e3e8e41fa3686bde5b1121.c3.environment.api.powerplatform.com:443/powerautomate/automations/direct/cu/25/workflows/76db7fc610f742cf861943e5847bc3a9/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=EfHpIcZYwndAW_IdPuHjt2Nb_VkuCSR4KAJDAt6FmD4';
 
 interface FormDataState {
     firstName: string;
@@ -111,8 +111,8 @@ return (
 
       {/* 5. Button Actions Row */}
       <div className={styles.actionsRow}>
-        <button type="submit" className={styles.submitBtn}>
-          Send message yo
+        <button type="submit" onClick={handleSubmit} className={styles.submitBtn}>
+          {status? "Send message yo..." : "Message sent"}
         </button>
       </div>
 

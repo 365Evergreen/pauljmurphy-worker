@@ -1,86 +1,50 @@
-import { useEffect, useState, useMemo } from "react";
-import LatestPosts from "../../components/LatestPosts/LatestPosts";
+import React from 'react'
 import styles from "./AboutPage.module.css";
-import SearchBox, { BlogPost } from "../../components/SearchBox/SearchBox";
+import { JsonSchema, UISchemaElement } from '@jsonforms/core';
+import SchemaForm from '../../components/SchemaForm/SchemaForm';
 
-// Blog post type for this page
-export interface BlogPostItem extends BlogPost {
-  cover_image: string;
-  url: string;
-  slug: string;
-  excerpt: string;
-  date: string; // ISO date string
-  category: string; // Added for filtering
-}
+// 1. Define or fetch the layout & structures (zero code changes needed here when modified)
+const dataSchema: JsonSchema = {
+  type: 'object',
+  properties: {
+    connectionName: { type: 'string', title: 'Connection Name', minLength: 3 },
+    endpointUrl: { type: 'string', title: 'Endpoint URL', format: 'uri' },
+    environment: { type: 'string', enum: ['Development', 'Staging', 'Production'] }
+  },
+  required: ['connectionName', 'endpointUrl']
+};
 
-const AboutPage: React.FC = () => {
-  const [blogPosts, setPosts] = useState<BlogPostItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+const uiSchema: UISchemaElement = {
+  type: 'VerticalLayout',
+  elements: [
+    { type: 'Control', scope: '#/properties/connectionName' },
+    { type: 'Control', scope: '#/properties/endpointUrl' },
+    { type: 'Control', scope: '#/properties/environment' }
+  ]
+};
 
-  const handleSelect = (post: BlogPost) => {
-    alert(`Selected: ${post.title}`);
+const AboutPage = () => {
+
+  const handleFormSubmit = (finalData: unknown) => {
+    console.log('Sending type-safe payload to backend:', finalData);
+    // Execute API mutations, state updates, or automated workflows here
   };
 
-  useEffect(() => {
-    fetch("/api/posts")
-      .then((r) => {
-        if (!r.ok) throw new Error("Failed to fetch posts");
-        return r.json();
-      })
-      .then((data: BlogPostItem[]) => {
-        setPosts(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, []);
-
-  // Extract unique categories
-  const categories = useMemo(() => {
-    const unique = Array.from(new Set(blogPosts.map((p) => p.category)));
-    return ["All", ...unique];
-  }, [blogPosts]);
-
-  // Filter posts by category
-  const filteredPosts = useMemo(() => {
-    if (selectedCategory === "All") return blogPosts;
-    return blogPosts.filter((p) => p.category === selectedCategory);
-  }, [selectedCategory, blogPosts]);
-
-  if (loading) {
-    return <p>Loading posts…</p>;
-  }
-
   return (
-      <div className={styles.contentContainer}>
-      <div className={styles.contentPageTitle}>  <h1>About me</h1></div>
-         {/* Category Filter */}
-      <div className={styles.filterBar}>
-        <label htmlFor="category">Filter by Category: </label>
-        <select
-          id="category"
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-        >
-          {categories.map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
-          ))}
-        </select>
+    <div className={styles.contentContainer}>
+      <div className={styles.pageContent}>
+        <h2>About Pauli</h2>
+        <div className={styles.formTestContainer}>
+          <SchemaForm
+            schema={dataSchema}
+            uiSchema={uiSchema}
+            onSubmit={handleFormSubmit}
+          />
+        </div>
       </div>
-
-      {/* Search Box */}
-      <SearchBox posts={filteredPosts} onSelect={handleSelect} />
-
-      {/* Latest Posts */}
-      <LatestPosts  />
     </div>
   );
 };
 
-export default AboutPage;
 
+export default AboutPage

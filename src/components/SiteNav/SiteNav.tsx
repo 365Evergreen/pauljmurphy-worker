@@ -61,7 +61,7 @@ const SiteNav: React.FC<SiteNavProps> = ({ onItemClick }) => {
                   {item.columns?.map((column, colIdx) => (
                     // ✅ Cleaned up all global class name bugs to use strict modules mapping
                     <div key={colIdx} className={styles.megamenuColumn}>
-                      <h4 className={styles.columnHeading}>{column.heading}</h4>
+                     
                       <ul className={styles.columnLinks}>
                         {column.links
                           .filter((link) => !('requiresAuth' in link) || isAuthenticated)

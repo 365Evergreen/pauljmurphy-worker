@@ -6,6 +6,7 @@
     "requiresAuth": true,
     "hasMegaMenu": true,
     "columns": [
+      
       {
         "links": [
           { "label": "All posts", "href": "/admin" },
@@ -42,6 +43,13 @@
   "title": "Sign in",
   "href": "https://pauljmurphy.com/admin",
   "requiresAuth":false,
+  "hasMegaMenu": false
+},
+{
+  "id": 5,
+  "title": "Registration",
+  "href": "/registration",
+  "requiresAuth": false,
   "hasMegaMenu": false
 }
 ]
