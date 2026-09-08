@@ -5,7 +5,7 @@
 }
 
 .mainContent {margin-top: var(--header-height);
-    background-color: rgb(196, 185, 185);
+    background-color: var(--bg);
     max-width: 1200px;
     padding-inline: clamp(1.5rem, 5vw, 2rem);
     margin-inline: auto;
