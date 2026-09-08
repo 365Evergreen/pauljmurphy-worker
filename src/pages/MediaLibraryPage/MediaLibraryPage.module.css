@@ -7,9 +7,9 @@
 }
 
 .admin {
-    max-width: var(--admin-width);
+    width: 100%;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 2rem;
 }
 
 /* --- Admin header --- */
