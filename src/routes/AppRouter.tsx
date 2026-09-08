@@ -8,7 +8,7 @@ import BlogArchivePage from "../pages/BlogArchivePage/BlogArchivePage";
 import SinglePostPage from '../pages/SinglePostPage/SinglePostPage';
 import PostEditorPage from '../pages/PostEditorPage/PostEditorPage';
 import MediaLibraryPage from "../pages/MediaLibraryPage/MediaLibraryPage";
-import MusicPage from "../pages/MusicPage/MusicPage";
+import TutorialsPage from "../pages/TutorialsPage/TutorialsPage";
 
 export default function AppRouter() {
   return (
@@ -22,7 +22,7 @@ export default function AppRouter() {
         {/* Content Pages Layout */}
         <Route element={<ContentPageShell />}>
           <Route path="/blog" element={<BlogArchivePage />} />
-          <Route path="/music" element={<MusicPage />} />
+          <Route path="/resources/tutorials" element={<TutorialsPage />} />
           <Route path="/blog/:slug" element={<SinglePostPage />} />
         </Route>
 

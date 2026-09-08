@@ -36,8 +36,8 @@ return (
     {/* 1. Logo Left Block Context (Stays on the left margin) */}
     <div className={styles.left}>
       <Link to="/" className={styles.brand} onClick={closeMenu}>
-        <img src="/siteLogo.svg" alt="Paulibaby logo" className={styles.brandLogo} />
-        <span className={styles.brandText}>Paulibaby</span>
+        <img src="/pjm-logo.svg" alt="Paul Murphy site logo" className={styles.brandLogo} />
+        <span className={styles.brandText}>Paul Murphy</span>
       </Link>
     </div>
 
