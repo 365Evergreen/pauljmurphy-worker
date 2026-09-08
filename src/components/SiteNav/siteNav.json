@@ -9,7 +9,7 @@
       {
         "heading": "Posts",
         "links": [
-          { "label": "All posts", "href": "/blog" },
+          { "label": "All posts", "href": "/admin" },
           { "label": "Media library", "href": "/admin/media-library" }
           ]
       }
@@ -17,8 +17,8 @@
   },
   {
     "id": 2,
-    "title": "Music",
-    "href": "/music",
+    "title": "About Paul",
+    "href": "/about",
     "requiresAuth": false,
     "hasMegaMenu": false
   },
@@ -33,8 +33,8 @@
         "heading": "Learn",
         "links": [
           { "label": "Blog", "href": "/blog" },
-          { "label": "Whitepapers", "href": "/whitepapers" },
-          { "label": "Webinars", "href": "/webinars" }
+          { "label": "Downloads", "href": "resources/downloads" },
+          { "label": "Tutorials", "href": "resources/tutorials" }
         ]
       }
     ]

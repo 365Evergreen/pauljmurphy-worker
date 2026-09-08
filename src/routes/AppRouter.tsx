@@ -9,6 +9,9 @@ import SinglePostPage from '../pages/SinglePostPage/SinglePostPage';
 import PostEditorPage from '../pages/PostEditorPage/PostEditorPage';
 import MediaLibraryPage from "../pages/MediaLibraryPage/MediaLibraryPage";
 import TutorialsPage from "../pages/TutorialsPage/TutorialsPage";
+import AboutPage from "../pages/AboutPage/AboutPage"
+import ResourcesPage from "../pages/ResourcesPage/ResourcesPage";
+import DownloadsPage from "../pages/DownloadsPage/DownloadsPage";
 
 export default function AppRouter() {
   return (
@@ -24,6 +27,9 @@ export default function AppRouter() {
           <Route path="/blog" element={<BlogArchivePage />} />
           <Route path="/resources/tutorials" element={<TutorialsPage />} />
           <Route path="/blog/:slug" element={<SinglePostPage />} />
+          <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/resources" element={<ResourcesPage/>}/>
+          <Route path="/resources/downloads" element={<DownloadsPage/>}/>
         </Route>
 
         {/* Editor & Admin Layout - all routes must follow the /admin/ path */}
