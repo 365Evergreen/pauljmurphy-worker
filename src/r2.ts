@@ -1,5 +1,5 @@
 /**
- * R2 helper functions for the paulibaby1979 Worker.
+ * R2 helper functions for the pauljmurphy Worker.
  * The BUCKET binding is defined in wrangler.jsonc.
  */
 

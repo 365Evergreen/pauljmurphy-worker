@@ -8,8 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "wrangler deploy",
-    "db:init": "wrangler d1 execute paulibaby-blog-db --remote --file=migrations/0001_init.sql",
-    "db:init:local": "wrangler d1 execute paulibaby-blog-db --local --file=migrations/0001_init.sql"
+    "db:init": "wrangler d1 execute pauljmurphy-blog-db --remote --file=migrations/0001_init.sql",
+    "db:init:local": "wrangler d1 execute pauljmurphy-blog-db --local --file=migrations/0001_init.sql"
   },
   "dependencies": {
     "@tiptap/core": "^3.30.1",

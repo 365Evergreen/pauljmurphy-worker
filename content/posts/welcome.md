@@ -2,7 +2,7 @@
 title: Welcome to my blog
 excerpt: This is the first post on my new blog powered by Cloudflare Workers.
 date: 2026-08-14
-coverImage: https://media.paulibaby.com/welcome.jpg
+coverImage: https://media.pauljmurphy.com/welcome.jpg
 ---
 
 Welcome to my new blog! This site is powered by **Cloudflare Workers** and **TinaCMS** for a seamless visual editing experience.

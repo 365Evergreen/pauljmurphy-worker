@@ -4,21 +4,21 @@ import styles from './HomePageHero.module.css'
 
 const slideData = [
   {
-    image: 'https://media.paulibaby.com/1788336576917-134312749643235365.jpg',
+    image: 'https://media.pauljmurphy.com/1788336576917-134312749643235365.jpg',
     title: 'Explore the Great Outdoors',
     subtitle: 'Discover breathtaking landscapes and hidden trails.',
     ctaText: 'Start Journey',
     ctaLink: '#journey'
   },
   {
-    image: 'https://media.paulibaby.com/1786730182653-1200x675.webp',
+    image: 'https://media.pauljmurphy.com/1786730182653-1200x675.webp',
     title: 'Embrace the Serenity',
     subtitle: 'Find peace away from the chaotic city life.',
     ctaText: 'Find Peace',
     ctaLink: '#peace'
   },
   {
-    image: 'https://media.paulibaby.com/1788336576917-134312749643235365.jpg',
+    image: 'https://media.pauljmurphy.com/1788336576917-134312749643235365.jpg',
     title: 'Connect with Nature',
     subtitle: 'Experience pristine ecosystems firsthand.',
     ctaText: 'Learn More',

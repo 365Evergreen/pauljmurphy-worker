@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, type ChangeEvent, type FormEvent, JSX } from "react";
 
 const API_BASE = ""; // same origin
-const MEDIA_URL = "https://media.paulibaby.com";
+const MEDIA_URL = "https://media.pauljmurphy.com";
 
 interface MediaItem {
   id: number;

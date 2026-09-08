@@ -2,7 +2,7 @@
 title: Why I moved to Cloudflare
 excerpt: Speed, simplicity, and edge computing — here's why I made the switch.
 date: 2026-08-13
-coverImage: https://media.paulibaby.com/cloudflare.jpg
+coverImage: https://media.pauljmurphy.com/cloudflare.jpg
 ---
 
 I recently migrated my blog to Cloudflare Workers. Here's why:

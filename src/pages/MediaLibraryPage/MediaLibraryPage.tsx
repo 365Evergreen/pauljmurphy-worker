@@ -29,7 +29,7 @@ type Layout = "grid" | "table";
 type SortKey = "created_at" | "content_type" | "size_bytes";
 type SortDir = "asc" | "desc";
 
-const MEDIA_URL = "https://media.paulibaby.com";
+const MEDIA_URL = "https://media.pauljmurphy.com";
 
 const FILTER_PILLS: { label: string; value: MediaType | "all"; icon: string }[] = [
   { label: "All", value: "all", icon: "✦" },

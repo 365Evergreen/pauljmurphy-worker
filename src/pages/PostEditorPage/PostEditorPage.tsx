@@ -369,7 +369,7 @@ export default function PostEditorPage() {
                     onChange={(e) =>
                       setEditing({ ...editing, cover_image: e.target.value })
                     }
-                    placeholder="https://media.paulibaby.com/image.jpg"
+                    placeholder="https://media.pauljmurphy.com/image.jpg"
                     className={styles.formInput}
                   />
                   <input

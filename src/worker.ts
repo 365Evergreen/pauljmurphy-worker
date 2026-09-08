@@ -1,5 +1,5 @@
 /**
- * paulibaby1979 Worker — Blog API + Admin Panel
+ * pauljmurphy Worker — Blog API + Admin Panel
  * 
  * Routes:
  *   GET  /api/posts          → list published posts (?category=slug1,slug2 to filter)
@@ -292,7 +292,7 @@ export default {
 
       return json({
         key,
-        url: `https://media.paulibaby.com/${key}`,
+        url: `https://media.pauljmurphy.com/${key}`,
       }, 201);
     }
 
@@ -303,7 +303,7 @@ export default {
         key: obj.key,
         size: obj.size,
         uploaded: obj.uploaded.toISOString(),
-        url: `https://media.paulibaby.com/${obj.key}`,
+        url: `https://media.pauljmurphy.com/${obj.key}`,
       }));
       return json(objects);
     }
@@ -469,7 +469,7 @@ export default {
           thumbnail_key: dbRow?.thumbnail_key ?? "",
           created_at: dbRow?.created_at ?? obj.uploaded.toISOString(),
           updated_at: dbRow?.updated_at ?? "",
-          url: `https://media.paulibaby.com/${obj.key}`,
+          url: `https://media.pauljmurphy.com/${obj.key}`,
         };
       });
 

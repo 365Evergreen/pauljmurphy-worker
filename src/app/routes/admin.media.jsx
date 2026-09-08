@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const API_BASE = ""; // same origin
-const MEDIA_URL = "https://media.paulibaby.com";
+const MEDIA_URL = "https://media.pauljmurphy.com";
 
 export default function AdminMedia() {
   const [media, setMedia] = useState([]);
