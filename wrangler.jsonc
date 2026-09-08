@@ -1,23 +1,29 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "pauljmurphy",
-  "compatibility_date": "2026-08-14",
-  "main": "src/worker.ts",
-  "assets": {
-    "not_found_handling": "single-page-application"
-  },
-  "r2_buckets": [
-    {
-      "binding": "BUCKET",
-      "bucket_name": "pjm-contentuploads"
-    }
-  ],
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "pauljmurphy-website-db",
-      "database_id": "f5f669ce-e868-457b-9590-90eef80847fe",
-      "remote": true
-    }
-  ]
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "pauljmurphy",
+	"compatibility_date": "2026-08-14",
+	"main": "src/worker.ts",
+	"assets": {
+		"not_found_handling": "single-page-application"
+	},
+	"r2_buckets": [
+		{
+			"binding": "BUCKET",
+			"bucket_name": "pjm-contentuploads"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "pauljmurphy-website-db",
+			"database_id": "f5f669ce-e868-457b-9590-90eef80847fe",
+			"remote": true
+		},
+		{
+			"binding": "pauljmurphy_blog_db",
+			"database_name": "pauljmurphy-website-db",
+			"database_id": "f5f669ce-e868-457b-9590-90eef80847fe",
+			"remote": true
+		}
+	]
 }
