@@ -9,20 +9,15 @@
 	"r2_buckets": [
 		{
 			"binding": "BUCKET",
-			"bucket_name": "pjm-contentuploads"
+			"bucket_name": "pauljmurphy-website"
 		}
 	],
 	"d1_databases": [
+
 		{
-			"binding": "DB",
+			"binding": "pauljmurphy_website_db",
 			"database_name": "pauljmurphy-website-db",
-			"database_id": "f5f669ce-e868-457b-9590-90eef80847fe",
-			"remote": true
-		},
-		{
-			"binding": "pauljmurphy_blog_db",
-			"database_name": "pauljmurphy-website-db",
-			"database_id": "f5f669ce-e868-457b-9590-90eef80847fe",
+			"database_id": "3bdd490e-c502-4cbb-8b88-9a21c2f830ec",
 			"remote": true
 		}
 	]
